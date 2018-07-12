@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
 * {
     box-sizing: border-box;
 }
@@ -13,20 +15,20 @@ body {
 
 .header {
     text-align: center;
+    color: white;
     padding: 32px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway';    
 }
 
 .row {
-    display: -ms-flexbox; /* IE10 */
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
     padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
 .column {
-    -ms-flex: 25%; /* IE10 */
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
@@ -37,20 +39,61 @@ body {
     vertical-align: middle;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {
-        -ms-flex: 50%;
         flex: 50%;
         max-width: 50%;
     }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .column {
-        -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
     }
 }
+
+#box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99%;
+    padding: 2%;
+    margin: 0.5%;
+    height: auto;;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 2.5rem;
+  }
+  .gradient-border {
+    --borderWidth: 3px;
+    /* background: #1D1F20; */
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  .gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  
+  @keyframes animatedgradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
