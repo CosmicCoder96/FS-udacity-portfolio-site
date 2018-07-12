@@ -1,128 +1,96 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
-
-* {
-    box-sizing: border-box;
+ * {
+     box-sizing: border-box;
 }
-
-
-
-img {
-    width: 100%;
-    -webkit-transition: all 0.5s; /* Safari */
-    transition: all 0.5s;
-
+ img {
+     width: 100%;
+     -webkit-transition: all 0.5s;
+    /* Safari */
+     transition: all 0.5s;
 }
-
-body {
-    margin: 0;
-    font-family: Arial;
+ body {
+     margin: 0;
+     font-family: Arial;
 }
-
-.header {
-    text-align: center;
-    color: white;
-    padding: 32px;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Raleway';    
+ .header {
+     text-align: center;
+     color: white;
+     padding: 32px;
+     align-items: center;
+     justify-content: center;
+     font-family: 'Raleway';
 }
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
+ .row {
+     display: flex;
+     flex-wrap: wrap;
+     padding: 0 4px;
 }
-
-.column {
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
+ .column {
+     flex: 25%;
+     max-width: 25%;
+     padding: 0 4px;
 }
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
+ .column img {
+     margin-top: 8px;
+     vertical-align: middle;
 }
-
-@media screen and (max-width: 800px) {
-    .column {
-        flex: 50%;
-        max-width: 50%;
+ @media screen and (max-width: 800px) {
+     .column {
+         flex: 50%;
+         max-width: 50%;
     }
 }
-
-@media screen and (max-width: 600px) {
-    .column {
-        flex: 100%;
-        max-width: 100%;
+ @media screen and (max-width: 600px) {
+     .column {
+         flex: 100%;
+         max-width: 100%;
     }
 }
-
-#box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 99%;
-    padding: 2%;
-    margin: 0.5%;
-    height: auto;;
-    color: white;
-    font-family: 'Raleway';
-    font-size: 2.5rem;
-  }
-  .gradient-border {
-    position: relative;
-  }
-  .gradient-border:after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top:0;
-    left:0;
-    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-    z-index: -1;
-    animation: animatedgradient 3s ease alternate infinite;
-    background-size: 300% 300%;
-  }
-  
-  
-  @keyframes animatedgradient {
-      0% {
-          background-position: 0% 50%;
-      }
-      50% {
-          background-position: 100% 50%;
-      }
-      100% {
-          background-position: 0% 50%;
-      }
-  }
-  
-  .data {
-      z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-      height:2%;
-      background: black;
-      color: white;
-  }
-  img:hover {
-      filter: blur(3px);
-      -webkit-filter: blur(3px);
-  }
-  a,
-a:link,
-a:visited,
-a:hover,
-a:active {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-family: inherit;
-    font-weight: normal;
+ .gradient-header {
+     position: relative;
 }
-
-.logo {
-    width:25px;
+ .gradient-header:after {
+     content: '';
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     top:0;
+     left:0;
+     background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+     z-index: -1;
+     animation: gradient 3s ease alternate infinite;
+     background-size: 300% 300%;
+}
+ @keyframes gradient {
+     0% {
+         background-position: 0% 50%;
+    }
+     50% {
+         background-position: 100% 50%;
+    }
+     100% {
+         background-position: 0% 50%;
+    }
+}
+ .data {
+     z-index: 999;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height:2%;
+     background: black;
+     color: white;
+}
+ img:hover {
+     filter: blur(3px);
+     -webkit-filter: blur(3px);
+}
+ a, a:link, a:visited, a:hover, a:active {
+     color: #FFFFFF;
+     text-decoration: none;
+     font-family: inherit;
+     font-weight: normal;
+}
+ .logo {
+     width:25px;
 }
