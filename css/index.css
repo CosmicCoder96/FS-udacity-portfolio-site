@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+
+
 img {
     width: 100%;
+    -webkit-transition: all 0.5s; /* Safari */
+    transition: all 0.5s;
+
 }
 
 body {
@@ -97,3 +102,33 @@ body {
           background-position: 0% 50%;
       }
   }
+  
+  .data {
+      z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: -8%; */
+      height:2%;
+      background: black;
+      color: white;
+  }
+  img:hover {
+      filter: blur(3px);
+      -webkit-filter: blur(3px);
+  }
+  a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #FFFFFF; /*color of your choosing*/
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: normal;
+}
+
+.logo {
+    width:25px;
+    /* height:25px; */
+}
